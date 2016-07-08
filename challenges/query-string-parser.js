@@ -44,4 +44,12 @@
 
 */
 
-// YOUR CODE HERE
+// YOUR CODE HERE       this only removes '=' i'm having trouble with objects and inserting information inside of them.
+function parseQueryString(query){            // handing in something is better than nothing but i'm a little disappointed i couldn't get further.
+  var parseObject = {};
+  var testOne = query.split("=");
+     for(var i = 0; i < testOne.length; i+=2){
+       parseObject[testOne[i]] = testOne[i+1];
+       console.log(parseObject);
+  }
+}

@@ -34,3 +34,24 @@
 */
 
 // YOUR CODE HERE
+function daysBetween(date){
+    if(typeof(date) !== 'string'){
+      alert('Please enter a valid Date string eg. "12/16/1988"');
+      return;
+    }else{
+      var dateString = new Date(date);
+      var actualDays = Math.round((dateString - Date.now())/864000);
+      return actualDays + " " + "Days between then and now!";
+    }
+}
+
+
+function birthdayReminder(objArr){
+  var endArray = [];
+  for(var i = 0; i < objArr.length; i++){
+    var whoIsIt = objArr[i].name;
+    var dateOfBirth = objArr[i].dob;
+    endArray.push(whoIsIt + "'s" + " " + "birthday is in" + " " + 200 + "days");          // 200 is a placeholder need to compare date with dob.  I need to remove the year from DOB.
+  }
+ console.log(endArray);
+}

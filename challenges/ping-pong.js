@@ -38,3 +38,24 @@
 */
 
 // YOUR CODE HERE
+
+// I've had a tough time with this problem set and this one is a doozey so i'm going to try and talk it out.
+//I think you would have to have an if statement to see if statement stating if the ball object starts at index[0] and if it does
+// use splice? to move the object one position to the right.  Until it reaches the end of the array and have an if statement that does the reverse?
+// another way would be to if you always start at index[0] is to unshift null and pop below moves the ball from one side to the other.
+// it doesn't increment the number and only works for the example array. 
+
+function pingPong(objArray){
+     while(objArray[3] === null){
+       objArray.pop();
+       objArray.unshift(null);
+       console.log(objArray);
+     }
+     if(objArray[3] !== null){
+       while(objArray[0] === null){
+         objArray.push(null);
+         objArray.shift();
+         console.log(objArray);
+       }
+     }
+}

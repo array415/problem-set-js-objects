@@ -30,4 +30,16 @@
 
 */
 
-// YOUR CODE HERE
+// YOUR CODE HERE     lots of awesome TA help.
+function words(str){
+      var wordObj = {};
+    for(var i = 0; i < str.length; i++){
+        if(wordObj[str[i]]){       
+            wordObj[str[i]]+=1;
+        }
+        else{
+            wordObj[str[i]] = 1;
+        }
+    }
+    return wordObj;
+}
